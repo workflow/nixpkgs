@@ -13,7 +13,6 @@ in
 rustPlatform.buildRustPackage rec {
   pname = "rover";
   version = "0.1.10";
-  name = "${pname}-${version}";
 
   src = fetchFromGitHub {
     owner = "apollographql";
