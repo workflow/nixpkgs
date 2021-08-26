@@ -44,7 +44,7 @@ rustPlatform.buildRustPackage rec {
   meta = with lib; {
     description = "The new CLI for Apollo GraphQL";
     longDescription = ''
-      Rover is a CLI for managing and maintaining data graphs with Apollo Studio:
+      Rover is a CLI for managing and maintaining data graphs with Apollo Studio.
     '';
     homepage = "https://www.apollographql.com/docs/rover/";
     changelog = "https://github.com/apollographql/rover/blob/main/CHANGELOG.md";
