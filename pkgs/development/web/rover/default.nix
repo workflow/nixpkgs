@@ -2,6 +2,10 @@
 , rustPlatform
 , fetchFromGitHub
 , perl
+, openssl
+, pkg-config
+, darwin
+, stdenv
 }:
 
 let
@@ -21,7 +25,8 @@ rustPlatform.buildRustPackage rec {
     sha256 = "0vmm35b9d7xw160pn797z78vj8jaav0qb6dw7n4ld8ssj076dsrh";
   };
 
-  nativeBuildInputs = [ perl ];
+  nativeBuildInputs = [ perl pkg-config ];
+  buildInputs = [ openssl ] ++ lib.optional stdenv.isDarwin darwin.apple_sdk.frameworks.Security; 
 
   # Put schema in place that would otherwise be dynamically fetched during the build
   preBuildPhase = [''
