@@ -38,7 +38,7 @@ rustPlatform.buildRustPackage rec {
   doCheck = false;
 
   # Turn off features that depend on v8 which tries to download a bunch of stuff
-  cargoBuildFlags = ["--no-default-features"];
+  cargoBuildFlags = [ "--no-default-features" ];
   cargoSha256 = "1vkb7p8ably6myix4yx782g8bfklwic9lhawhlk3m7cj440p9rqy";
 
   meta = with lib; {
