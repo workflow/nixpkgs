@@ -1010,6 +1010,7 @@ self: super: {
       "coc-emmet"
       "coc-eslint"
       "coc-explorer"
+      "coc-flutter"
       "coc-git"
       "coc-go"
       "coc-highlight"
